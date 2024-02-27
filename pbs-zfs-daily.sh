@@ -76,7 +76,7 @@ else
     echo "Today no Maintenance"
 fi
 
-# Pool cleanup time
+# stop SCRUB on TARGET and SOURCE POOL
 ssh root@$SOURCEHOST zpool scrub -s $ZPOOLSRC
 zpool scrub -s $ZPOOLDST
 
